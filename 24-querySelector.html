@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+
+<body>
+    <h1>Javascript - Seletores</h1>
+    <p class="primeiro-paragrafo">Aprendendo o seletor querySelector</p>
+    <p id="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quis ipsum, dolorum nobis, odit
+        laborum possimus distinctio quas accusantium modi veritatis provident praesentium minima vel id? Velit suscipit
+        laborum ut!</p>
+
+        <div class="bolinha-azul"></div>
+</body>
+
+
+
+
+
+<script>
+    let tituloPrincipal = document.querySelector("h1");
+    tituloPrincipal.style.fontSize = "4rem";
+    // queryselector se baseia nos seletorres do css
+
+
+    let primeiroParagrafo = document.querySelector(".primeiro-paragrafo");
+    primeiroParagrafo.style.color = "#000";
+
+    let segundoParagrafo = document.querySelector("#destaque");
+    segundoParagrafo.style.backgroundColor = "#444";
+    segundoParagrafo.style.color = "#eee";
+
+    let bolinha = document.querySelector(".bolinha-azul");
+    bolinha.style.width = "200px";
+    bolinha.style.height = "200px";
+    bolinha.style.borderRadius = "60%";
+    bolinha.style.backgroundColor = "darkblue";
+
+
+</script>
+
+</html>

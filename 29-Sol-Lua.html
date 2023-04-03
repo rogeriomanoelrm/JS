@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol e Lua</title>
+    <style>
+
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        body{
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <div>
+        <img id="imgPeriodo" title="sol" src="imagens/sol.png" alt="imagem da Lua">
+    </div>
+
+
+
+    <script>
+        imgPeriodo.addEventListener("mouseenter", noite);
+
+        function noite(){
+            imgPeriodo.setAttribute("src", "./imagens/lua.png");
+            document.querySelector("body").style.backgroundColor = "black"
+            document.querySelector("img").style.width = "300px"
+
+
+        }
+
+        imgPeriodo.addEventListener("mouseleave", dia);
+
+
+        function dia(){
+            imgPeriodo.setAttribute("src", "./imagens/sol.png");
+            document.querySelector("body").style.backgroundColor = "lightblue"
+            document.querySelector("img").style.width = "300px"
+
+            // poderia ser document.body.style.backgroundColor
+            //  tambem poderia criar um id no body=corpo corpo.style.background
+
+
+
+        }
+    </script>
+</body>
+</html>

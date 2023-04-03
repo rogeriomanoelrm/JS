@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+
+    
+
+
+    <script>
+        // const name = window.prompt("Qual é o seu nome?")
+        // let nota1 = Number.parseFloat(window.prompt("Qual a sua primeira nota?"))
+        // let nota2 = Number.parseFloat(window.prompt("Qual a sua segunda nota?"))
+        // let nota3 = Number.parseFloat(window.prompt("Qual a sua terceira nota?"))
+        // let nota4 = Number.parseFloat(window.prompt("Qual a sua quarta nota?"))
+
+        const name = window.prompt("Qual é o seu nome?"); 
+        let nota1 =  +window.prompt("Qual a sua primeira nota?");
+        let nota2 =  +window.prompt("Qual a sua segunda nota?");
+        let nota3 =  +window.prompt("Qual a sua terceira nota?");
+        let nota4 =  +window.prompt("Qual a sua quarta nota?");
+
+        // o + fará o javascrpt entender que é um numero positivo
+        // mas deve saber usar o parsefloat
+
+         
+
+         const media = (nota1+nota2+nota3+nota4)/4;
+
+
+
+        if(media>=6){
+            window.alert(`${name} sua media é ${media} você foi aprovado!`)
+        }
+        else{
+            window.alert(`${name} sua média é ${media} você foi reprovado!`)
+
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

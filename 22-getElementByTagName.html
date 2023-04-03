@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByTagName</title>
+</head>
+<body>
+    <h1>Seletores do JS</h1>
+    <p>Aprendendo um pouco mais dos seletores do javascript</p>
+    <div></div>
+
+
+<script>
+    let tituloPrincipal = document.getElementsByTagName("h1")[0];
+    tituloPrincipal.style.color = "green";
+
+    let paragrafo = document.getElementsByTagName("p")[0];
+    paragrafo.style.backgroundColor = "rgb(255,0,0)";
+
+    let box = document.getElementsByTagName("div")[0];
+    box.style.width = "300px";
+    box.style.height = "300px";
+    box.style.backgroundColor =  "yellow";
+    box.style.borderStyle = "solid";
+    box.style.borderRadius = "10px";
+
+
+
+
+    // não precisa do nome window
+</script>
+
+</body>
+</html>

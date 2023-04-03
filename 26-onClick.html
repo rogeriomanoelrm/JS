@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Js - Onclick</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: dashed 5px brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(2, 35, 24);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="conteudo">
+
+    </div>
+
+    <button onclick="mostrarNome()">Mostre meu nome</button>
+
+
+    <script>
+
+        function mostrarNome() {
+            conteudo.innerHTML = "Rogério";
+            conteudo.style.color = "darkgreen";
+
+        }
+    </script>
+
+</body>
+
+</html>
