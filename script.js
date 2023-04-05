@@ -1,36 +1,79 @@
-let senha1, senha2;
+let valueNumber1, valueNumber2;
+let operationSelected;
+let numberOfClicks = 0;
 
 
 
+function updateDisplay(buttonNumber) {
+    // const display = document.getElementById("display");
+    // const display  = document.getElementsByTagName("div")[0];
+    const display = document.querySelector("#display");
+    display.innerHTML += buttonNumber;
 
-senha.addEventListener("keypress", () => {senha1 = senha.value});
-
-// function salvarSenha(){
-//     senha1 = senha.value
-// }
-//  A funçao foi jogada dentro do evento, foi rettirado function e salvarSenha e no lugar pra saber que é uma função foi colocado =>
-
-
-confirmeSenha.addEventListener("keypress", validaSenha);
-
-function validaSenha(){
-    senha2 = confirmeSenha.value;
-
-    if (senha2 != senha1){
-
-     mensagem.innerText = "Senhas divergentes";
-     senha.style.border = " 3px solid red";
-     confirmeSenha.style.border = "3px solid red"
-
+    if(numberOfClicks===0){
+        display.innerHTML = buttonNumber;
+        
     } else{
-        senha.style.border = "3px solid red";
-        confirmeSenha.style.border = "3px solid #ddd";
-        mensagem.style.display = "none"
-
-        btnEnviar.classList.remove("intervalo");
-        btnEnviar.classList.add("ativo");
-
-
+        display.innerHTML += buttonNumber
     }
+
+}
+
+plusButton.addEventListener("click", sum);
+function sum() {
+    valueNumber1 = Number.parseInt(display.innerHTML);
+    display.innerHTML = 0;
+    operationSelected = "sum";
+
+}
+ 
+minusButton.addEventListener("click", substraction);
+function substraction(){
+    valueNumber1 = Number.parseInt(display.innerText);
+    display.innerHTML = 0;
+    operationSelected = "substraction";
+}
+
+timesButton.addEventListener("click", multiplication);
+function multiplication (){
+    valueNumber1 = Number.parseInt(display.innerText);
+    display.innerHTML = 0;
+    operationSelected = "multiplication"
+}
+
+dividedButton.addEventListener("click", division);
+function division(){
+    valueNumber1 = Number.parseInt(display.innerText)
+    display.innerHTML = 0;
+    operationSelected = "division";
+}
+
+resultButton.addEventListener("click", result);
+function result() {
+    valueNumber2 = Number.parseInt(display.innerText);
+
+if(operationSelected === "sum"){
+    display.innerHTML = valueNumber1 +  valueNumber2;
+} else if(operationSelected === "substraction"){
+    display.innerHTML = valueNumber1 - valueNumber2;
+} else if(operationSelected === "multiplication"){
+    display.innerHTML = valueNumber1 * valueNumber2;
+} else if(operationSelected === "division"){
+    display.innerHTML = valueNumber1 / valueNumber2;
+}
+else{
+    console.log("wrong");
+
+}
+    
+
+}
+
+clearButton.addEventListener("click", deleteDisplay);
+function deleteDisplay(){
+    display.innerHTML = 0;
+    operationSelected = null;
+    valueNumber1 = null;
+    valueNumber2 = null;
 }
 
