@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-video {
+    width: 100vw;
+    height: 100vh;
+    /* A posição do elemento será fixa em realção ao nevegador */
+    /* O video ficará a 0px de distância do topo e da margem esquerda */
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    /* irá controlar como o objeto será redimensionando na tela */
+    z-index: -1;
+    /* z-index: -1 cover vai pegar o texto que tinha sido coberto pelo video e posicionar na frente do video */
+
+    color: aliceblue;
+
+
+}
+
+body main {
+    color: aliceblue;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-cadastro {
+    width: 40vw;
+    height: 90vh;
+    background-color: rgba(240, 240, 240, 0.90);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.img-topo {
+    max-width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    margin-bottom: 5px;
+}
+
+input,
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: solid 3px #bbb;
+    box-shadow: 0 0 10px;
+    font-size: 1.1rem;
+}
+
+#mensagem {
+    height: 20px;
+    margin: -15px;
+
+}
+
+
+.ativo {
+    background-color: #00b4e9;
+    color: aliceblue;
+    box-shadow: 0 0 4px #00b4e9;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border: 0px;
+    cursor: pointer;
+}
+
+.ativo:hover {
+    box-shadow: 0 0 20px #120100 ;
+}
+
+.inativo{
+    background-color: #ccc;
+    border: solid 1px #888;
+    color: #fff;
+    margin-bottom: 30px;
+}
